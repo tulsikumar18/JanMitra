@@ -6,7 +6,7 @@ import { useTranslation } from '../hooks/useTranslation';
 import DashboardScreen from '../screens/government/DashboardScreen';
 import IssueListScreen from '../screens/government/IssueListScreen';
 import IssueDetailScreen from '../screens/government/IssueDetailScreen';
-import ProfileScreen from '../screens/government/GovernmentProfileScreen';
+import GovernmentProfileScreen from '../screens/government/GovernmentProfileScreen';
 import ReportsScreen from '../screens/government/ReportsScreen';
 
 const Stack = createStackNavigator();
