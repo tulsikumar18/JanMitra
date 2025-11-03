@@ -1,0 +1,97 @@
+{
+  "expo": {
+    "name": "JanMitra",
+    "slug": "janmitra",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.janmitra.app",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to take photos of civic issues for reporting.",
+        "NSMicrophoneUsageDescription": "This app uses the microphone to record voice descriptions of civic issues.",
+        "NSLocationWhenInUseUsageDescription": "This app uses your location to identify and report civic issues in your area.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app uses your location to identify and report civic issues in your area."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.janmitra.app",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-localization",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app needs access to your photos to let you add images to your civic issue reports."
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone to record voice descriptions of civic issues."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationPermission": "Allow $(PRODUCT_NAME) to use your location to identify and report civic issues in your area."
+        }
+      ],
+      [
+        "react-native-voice",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone to convert speech to text for issue descriptions."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#FF6B6B",
+          "sounds": [
+            "./assets/notification-sound.wav"
+          ]
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "janmitra-project"
+      }
+    },
+    "scheme": "janmitra",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ]
+  }
+}
