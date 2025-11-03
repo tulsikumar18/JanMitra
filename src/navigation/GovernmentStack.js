@@ -87,7 +87,7 @@ const GovernmentStack = () => {
 
       <Stack.Screen
         name="Profile"
-        component={ProfileScreen}
+        component={GovernmentProfileScreen}
         options={{
           title: t('common.profile'),
         }}
