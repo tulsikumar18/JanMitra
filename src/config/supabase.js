@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Environment variables - these should be set in your environment
-const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL || 'https://your-project.supabase.co';
-const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || 'your-anon-key';
+// Supabase project configuration
+const supabaseUrl = 'https://jbmmuyoxvwhxafeosvms.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpibW11eW94dndoeGFmZW9zdm1zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjIwODU4MjUsImV4cCI6MjA3NzY2MTgyNX0.1pcx5AnN0a3jAFtyB958Xkx10SCwzEjWtsDkbzexOws';
 
 // Create Supabase client
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
@@ -147,8 +147,8 @@ export const authHelpers = {
 // Storage helpers for file uploads
 export const storageHelpers = {
   // Upload image
-  uploadImage: async (file: File, issueId: string) => {
-    const fileExt = file.name.split('.').pop();
+  uploadImage: async (file: any, issueId: string) => {
+    const fileExt = file.name ? file.name.split('.').pop() : 'jpg';
     const fileName = `${issueId}/${Date.now()}.${fileExt}`;
     const filePath = `images/${fileName}`;
 
@@ -169,8 +169,8 @@ export const storageHelpers = {
   },
 
   // Upload audio file
-  uploadAudio: async (file: File, issueId: string) => {
-    const fileExt = file.name.split('.').pop();
+  uploadAudio: async (file: any, issueId: string) => {
+    const fileExt = file.name ? file.name.split('.').pop() : 'm4a';
     const fileName = `${issueId}/${Date.now()}.${fileExt}`;
     const filePath = `audio/${fileName}`;
 
