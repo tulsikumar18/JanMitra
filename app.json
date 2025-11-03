@@ -66,12 +66,6 @@
         }
       ],
       [
-        "react-native-voice",
-        {
-          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone to convert speech to text for issue descriptions."
-        }
-      ],
-      [
         "expo-notifications",
         {
           "icon": "./assets/notification-icon.png",
